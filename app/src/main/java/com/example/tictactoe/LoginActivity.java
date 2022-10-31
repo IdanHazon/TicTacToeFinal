@@ -7,6 +7,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -18,6 +20,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void login(View view) {
         EditText etEmail= findViewById(R.id.editTextTextEmailAddress);
+
         String mail= etEmail.getText().toString();
         SharedPreferences sp=this.getSharedPreferences("details",MODE_PRIVATE);
         SharedPreferences.Editor editor= sp.edit();
